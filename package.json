@@ -1,0 +1,30 @@
+{
+  "name": "@piajs/remapping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node -r tsm src/index.ts",
+    "build": "esbuild src/index.ts --outfile=dist/index.js --target=es6",
+    "watch": "npm run build -- --watch",
+    "test": "uvu -r tsm __tests__"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "fs-extra": "^10.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.15.8",
+    "@babel/preset-env": "7.15.8",
+    "@parcel/source-map": "2.0.0",
+    "@types/babel__core": "7.1.16",
+    "@types/node": "16.10.9",
+    "esbuild": "0.13.4",
+    "terser": "5.9.0",
+    "tsm": "2.1.2",
+    "uvu": "0.5.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
